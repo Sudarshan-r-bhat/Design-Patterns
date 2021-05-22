@@ -1,0 +1,14 @@
+
+
+flow of design pattern:
+
+	. First we will create a factory pattern which will give us Iterator to a collection.
+	 note: here you are not writing a inner iterator class. you are writing iterator class
+	 for a external collection class.
+	
+	. Iterator should have hasNext(), next() methods. 
+	
+
+
+
+

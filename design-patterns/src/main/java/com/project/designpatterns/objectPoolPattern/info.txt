@@ -1,0 +1,27 @@
+
+
+Flow of the design pattern:
+
+	. create a abstract Object pool which is Single thread-ly scheduled 
+	 to maintain fixed set of objects in the pool.
+	 
+	. Implement a thread safe singleton object pool by extending the 
+	 ObjectPool.
+	 
+	. A TaskExecutor class, to borrow -> process -> return the objects
+	 from/to the pool.
+	
+	. A DriverClass to run TaskExecutor objects in a multi-threaded environment.
+	
+	
+Remember:
+	ScheduledExecutorService, Executor, ExecutorService,  
+	newFixedThreadPool();
+	
+
+
+
+
+
+
+

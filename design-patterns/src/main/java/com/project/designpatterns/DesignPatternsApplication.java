@@ -7,6 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class DesignPatternsApplication {
 
 	public static void main(String[] args) {
+		var str = "heelo world"; // java 10 feature.
 		SpringApplication.run(DesignPatternsApplication.class, args);
 	}
 

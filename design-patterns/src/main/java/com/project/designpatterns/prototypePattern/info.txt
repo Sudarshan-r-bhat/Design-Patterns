@@ -1,0 +1,18 @@
+
+
+Flow of the design pattern:
+	
+	. You will have to maintain a Prototype registry, which will 
+	 maintain the original copies.
+	
+	. every object that is stored in the registry will implement clone() method. / simply use a 
+	 interface or abstract class.
+	
+	.  NOte: clone() method will not create a deep copy of objects. It will create shallow copy.
+	 meaning similar data of original object will be stored in different memory location.
+	 
+	
+	
+
+
+
