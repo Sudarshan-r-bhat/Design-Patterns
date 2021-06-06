@@ -1,0 +1,30 @@
+Flow of Design pattern:
+
+
+interface[common method]  <-- Container class[common method which delegates calls to its leaves, container objects, leaves]
+	^
+	|_________Leaf[common method which does the actual work.]
+
+
+
+
+--------------	Notes	---------------------------------
+
+
+Composite Design pattern, is one of the most interesting Design pattern, I've come across.
+
+It has a tree like structure. 
+
+imagine large box containing different types of products, smaller boxes
+and each smaller box containing more products and smaller boxes.
+now you're task is to get the price of all the products, in total.
+
+answer is recursion. But how would you recur over different types of classes coz, every product and box is 
+a discrete implementation.
+Solution is to use an interface which connects every product and boxes.
+technically speaking create a interface which enforces a common method across all its implementation.
+
+
+
+
+

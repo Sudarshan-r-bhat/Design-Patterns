@@ -1,0 +1,14 @@
+
+
+
+Flow of Design pattern:
+
+- you will have a Sender class, Command<Interface> class, Receiver class
+- you sender will use the command Implementation, and execute() method is 
+ called on the Command, command in-turn will execute some method in Receiver.
+
+
+
+
+
+

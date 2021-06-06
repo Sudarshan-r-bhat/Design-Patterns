@@ -1,0 +1,35 @@
+
+
+Flow of design pattern:
+	Caretaker class 
+	Originator class [ Memento class ]
+
+note: change you're perspective, Originator is not the Primary class, But CareTaker is.
+
+-------------   notes    ----------------------------------------
+
+you  will have a Caretaker object which will store a reference to originator' object 
+and also the history of all snapshots.
+
+
+originator will have reference to State/memento to save and restore the snapshot/Memento.
+
+Memento will have getters and setter to fetch all the state variables.
+
+And only originator will have methods to store and restore the snapshot. Ofcourse memento
+will have a public method restore.
+
+but the history of memento's will be private fields in the Caretaker object. hence only
+originator will be able to store and restore the memento.
+
+
+
+
+
+
+
+
+
+
+
+
