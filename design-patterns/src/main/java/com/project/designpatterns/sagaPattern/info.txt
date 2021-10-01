@@ -1,0 +1,24 @@
+
+
+
+This is a Micro-service architectural design pattern.
+
+But i am trying to bring forth the scenario, using multi-threading.
+
+
+. 2 popular ways of handling transaction consistency in a distributed
+ system is by having  a 
+ 
+ 1. orchestratorService like Axon 
+ 
+ 2. Choreography (where each microservice monitors all the events and 
+  handles its domain independently be in commit or rollback of a transaction.)
+ . But this is not efficient for large event based systems.
+
+
+
+
+
+
+
+
