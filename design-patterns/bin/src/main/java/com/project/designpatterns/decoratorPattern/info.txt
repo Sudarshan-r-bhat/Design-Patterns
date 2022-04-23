@@ -1,0 +1,20 @@
+
+flow of the design pattern:
+	
+	DataSource<Interface>  implemented by Abstract class called DataSourceDecorator
+	the Abstract class is extended by FileDecorator, EncrytptionDecorator, CompressDecorator
+
+	Then, file is wrapped inside Encryption -> inside CompressorDecorator.
+	finally the data is read and written. by calling the interface methods.
+	
+
+
+
+
+
+
+
+
+
+
+

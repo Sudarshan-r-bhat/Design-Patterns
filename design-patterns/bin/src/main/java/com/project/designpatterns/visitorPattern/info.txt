@@ -1,0 +1,28 @@
+
+
+
+Flow of Design:
+	driver class[list of all nodes] , 
+	Nodes[visitor class reference, accept method]
+	visitor[method impl which are invoked by nodes]
+	Data transfer objects for communication b/w nodes and visitor.
+	
+	
+----------------- Notes: ----------------
+. visitor pattern uses a technique called double-dispatch.
+
+. you would be maintaining, a visitor class, which maintains a method implementation
+ for each of the nodes.
+ 
+. Each of the node class will implement a method accept() which will recognize the visitor class 
+ and call an appropriate method of visitor and pass appropriate argument.
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,24 @@
+
+
+Flow of Design pattern:
+	Interface[common methods]
+		^
+		|______ Actual Service Class[business logic methods]
+		|______ Proxy service class[ any type of proxy implementation]
+
+---------------		Notes	-------------------------------------------------------------------
+
+You can Implement different types of Proxy ,
+	. lazy Initialization virtual proxy.
+	. Access control proxy
+	. local execution proxy
+	. Logging proxy
+	. Smart reference: kind of grabage collection of resource when the client obj is no longer
+	 using the resource.
+
+
+
+
+
+
+

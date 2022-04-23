@@ -14,7 +14,10 @@ Flow of the design pattern:
 	. A DriverClass to run TaskExecutor objects in a multi-threaded environment.
 	
 	
-
+Remember:
+	ScheduledExecutorService, Executor, ExecutorService,  
+	newFixedThreadPool();
+	
 
 
 

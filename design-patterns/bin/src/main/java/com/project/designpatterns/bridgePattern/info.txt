@@ -1,0 +1,32 @@
+
+
+
+
+Flow of Design patterns:
+ 
+You maintain 2 separate Heirarchy of classes, Abstraction and Implementation
+Abstraction class should make use of Implementation class to bring about working features.
+
+Abstract class <--- concreate class [ invokes Impl class methods], ....
+Interface <------- concreateImpl class[ Impl methods to be called by Abstraction layer.], .....
+
+In the current example, remotes will be abstraction layers and devices like TV, radio will be 
+implementation layers.
+
+Regular remote will be able to volume UP/DOWN, channel UP/DOWN
+Advanced remote will be able to mute as well.
+
+The above remotes can have other extensions like TV remote, radio remote, AC remote etc.
+
+-------------------		NOTES	------------------------
+
+. According to GOF book, Bridge pattern is described as combination of Abstraction and Implementation.
+
+. The above terminology doesn't mean abstract class and interface.
+. Abstraction meaning a layer where there is NO actual business logic involved, its like a GUI component.
+
+. Implementation is a layer where there is actual implementation (business logic) involved for the 
+ operation done in GUI.
+
+
+

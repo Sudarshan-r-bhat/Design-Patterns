@@ -1,23 +1,8 @@
 
 Problem statement:
 	
-	- you need to be able to have multiple UserApplications.
-	- you need to be able to have reusable updates that can be applied 
-	 on UserApplication
-	- on a single push signal on UserApplication all the updates should get 
-	applied.
-
-
-
-Flow of Design:
-
-	. Abstract Subject(userApplication) -> Subjects (SpringUsers)
-	. Abstract Observers (updates) -> multiple udpate objects (ui, marketplace, etc)
+	- You need to have multiple subscribers/users Eclipse software users
+	 for specific updates
+	- Eclipse server should be able generate different updates and subscribers 
+	 need to be notified accordingly.
 	
-	. Subject should maintain a list of all observers, 
-	 should have a method to add more observers.
-	
-	. Abstract Observer should have a abstract method to be implemented by 
-	 every observer.
-	. Every Observer should be able to accept a Subject, to attach itself.
-

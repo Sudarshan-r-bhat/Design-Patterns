@@ -1,0 +1,37 @@
+
+
+
+
+Flow of design pattern:
+	. State is a extension of Strategy design pattern.
+	. In state, the current state machine is aware of its next state after a certain process. but not in strategy pattern.
+	 
+	- you create an interface with method which process the data and sets the state machine/context to
+	 the next state.
+	. 
+
+
+
+
+/* 
+ 	Here you will create 3 states for document processing state.
+	. draft
+	. moderate
+	. publish
+
+*/
+
+---------------	notes	------------------------------------
+
+My wrong assumptions:
+	you define N states. each state will have a reference variable to nextState
+	when a document is passed to the state its processed and as a chain its passed to 
+	process in the next state.
+	this assumption is some-what like chain of responsibility pattern.
+	
+Right way and why its right:
+	The previous assumption doesn't maintain any state information in the document.
+	say you send the document to an external system, it won't know the current state of the document.
+	
+	states basically represents the algorithms or procedures that are applied to the document.(State of the document)
+

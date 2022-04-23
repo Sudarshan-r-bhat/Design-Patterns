@@ -1,19 +1,26 @@
 package com.project.designpatterns.observer;
 
-import java.util.HashSet;
-import java.util.Set;
-
-import com.fasterxml.jackson.databind.util.LRUMap;
-
-// This is a Subject class
 public abstract class AnyUser {
 	
-	// This the list of observers.
-	protected final Set<Updates> updates = new HashSet<>();
-	
-	// This is internally attach observers to the Subject.
-	public void attach(Updates update) {
-		updates.add(update);
+	private String userId;
+	public AnyUser(String id) {
+		this.userId = id;
 	}
-	public abstract void sendUpdates(Object... args);
+	
+	public void applyUpdates(String updateData) {
+		System.out.println("Applying " + updateData + " for " + this.getClass().getSimpleName());
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		
+		AnyUser otherUser = obj instanceof AnyUser? (AnyUser) obj: null;
+		boolean isEqual = otherUser.userId.equals(this.userId);
+		
+		return otherUser != null ? isEqual: false;
+	}
+	
+	
+	
+	
 }
