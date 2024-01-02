@@ -7,7 +7,7 @@ pattern.
 
 ## MEMENTO DESIGN PATTERN
 It is a Behavioural design pattern . You can use this pattern when you need to store state of a
-application and provide undo operations.
+application and provide any operation on those state like undo.
 
 ### EXAMPLE
 Let's say you are building a text editor app, obviously you need to provide undo operation feature,
