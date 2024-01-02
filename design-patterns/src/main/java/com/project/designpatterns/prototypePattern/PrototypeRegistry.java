@@ -23,9 +23,12 @@ public class PrototypeRegistry {
 // An interface can extend another interface
 interface Earth extends Cloneable{
 	public Object clone();
+	public String getDetails();
+	public void setDetails(String json);
 }
 
 class Forest implements Earth {
+	private String json;
 	public Object clone() {
 		try {
 			return super.clone();
@@ -33,10 +36,17 @@ class Forest implements Earth {
 			e.printStackTrace();
 		}
 		return null;
+	}
+	public String getDetails(){
+		return json;
+	}
+	public void setDetails(String json) {
+		this.json = json;
 	}
 }
 class Tiger implements Earth {
-	
+
+	private String json;
 	public Object clone() {
 		try {
 			return super.clone();
@@ -44,9 +54,16 @@ class Tiger implements Earth {
 			e.printStackTrace();
 		}
 		return null;
+	}
+	public String getDetails(){
+		return json;
+	}
+	public void setDetails(String json) {
+		this.json = json;
 	}
 }
 class Lion implements Earth {
+	private String json;
 	public Object clone() {
 		try {
 			return super.clone();
@@ -55,8 +72,15 @@ class Lion implements Earth {
 		}
 		return null;
 	}
+	public String getDetails(){
+		return json;
+	}
+	public void setDetails(String json) {
+		this.json = json;
+	}
 }
 class Deer implements Earth {
+	private String json;
 	@Override
 	public Object clone() {
 		try {
@@ -65,5 +89,11 @@ class Deer implements Earth {
 			e.printStackTrace();
 		}
 		return null;
+	}
+	public String getDetails(){
+		return json;
+	}
+	public void setDetails(String json) {
+		this.json = json;
 	}
 }
