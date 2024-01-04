@@ -2,9 +2,9 @@ package com.project.designpatterns.decoratorPattern;
 
 import java.util.Base64;
 
-public class EncryptionDecorator extends DataSourceDecorator {
+public class EncodeDecodeDecorator extends DataSourceDecorator {
 
-	public EncryptionDecorator(DataSource source) {
+	public EncodeDecodeDecorator(DataSource source) {
 		super(source);
 	}
 	@Override

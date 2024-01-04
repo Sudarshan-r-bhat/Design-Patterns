@@ -1,5 +1,7 @@
 package com.project.designpatterns.decoratorPattern;
 
+import javassist.ClassPath;
+
 /*
 NOTE:
 	when a child class object is created its parent class is NOT instantiated.
@@ -26,7 +28,7 @@ NOTE:
 public class Demo {
 	public static void main(String[] args) {
         String salaryRecords = "Name,Salary\nJohn Smith,100000\nSteven Jobs,912000";
-        DataSourceDecorator encoded = new CompressionDecorator(new EncryptionDecorator(new FileDataSource("out/OutputDemo.txt")));
+        DataSourceDecorator encoded = new CompressionDecorator(new EncodeDecodeDecorator(new FileDataSource("out/OutputDemo.txt")));
         encoded.writeData(salaryRecords);
         DataSource plain = new FileDataSource("out/OutputDemo.txt");
 

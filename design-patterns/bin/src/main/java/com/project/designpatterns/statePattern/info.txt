@@ -21,17 +21,4 @@ Flow of design pattern:
 
 */
 
----------------	notes	------------------------------------
-
-My wrong assumptions:
-	you define N states. each state will have a reference variable to nextState
-	when a document is passed to the state its processed and as a chain its passed to 
-	process in the next state.
-	this assumption is some-what like chain of responsibility pattern.
-	
-Right way and why its right:
-	The previous assumption doesn't maintain any state information in the document.
-	say you send the document to an external system, it won't know the current state of the document.
-	
-	states basically represents the algorithms or procedures that are applied to the document.(State of the document)
 
