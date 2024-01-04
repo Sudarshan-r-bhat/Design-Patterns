@@ -61,3 +61,18 @@ process to enable reading.
 ### UML DIAGRAM
 
 ![decorator-design-pattern-uml-diagram](design-patterns/assets/decorator.png)
+
+# PROXY DESIGN PATTERN
+It is a structural design pattern used to provide a proxy for a service class, so that it can control the flow of information in and out of the actual service class. And aslo
+to maintain a stable client functionality even when changes are made to the actual service class. 
+
+proxy service class usecases include caching, access control
+
+## EXAMPLE 
+Let's say you have a Search tool, which searches for text from the domain you specify. But only to the known users.
+to achieve this, you create a SearchProxyService, that composes firewall service, which authorizes the user access to the 
+search service. The proxy service simply uses firewall to authorize the user request and responds accordingly.
+
+## UML DIAGRAM
+
+![proxy-design-pattern-uml-diagram](design-patterns/assets/proxy.png)
