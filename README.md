@@ -2,8 +2,33 @@
 In this repository I have covered 21 design pattern of all 3 types creational, behavioural, structural
 in a very unique way so you can relate to the realtime analogy of the examples used to implement each
 pattern.
-### status: code implementation: DONE, readme.md : Work in progress.
+### status: 
+    Code implementation: DONE
+    README.md : Work in progress.
 
+### Basics of structuring
+Class / Abstract Class inheritance
+1. When you have object is-a type of relationship and want to have shared state, shared functionality
+2. have more control over the shared resource with access modifiers (protected/public)
+ex:
+```
+Template Method design pattern, where it provides a concrete implementation of 'template method' and default helper methods , Ensuring the overall algorithm structure is fixed while allowing variation in specific steps.
+
+```
+
+Interface inheritance
+1. When you want to layout the spec or template and a polymorphic behaviour rather than focusing on how & what state/memory is managed.
+2. When you want to keep the code loosely coupled, plug and play.
+3. Interfaces do not enforce shared state, so they encourage composition rather than inheritance. meaning concrete implementation classes can be initialized with required class objects.
+
+ex: 
+```
+Command design pattern , where the Interface dictates execute() method
+Strategy design pattern
+Observer design pattern
+
+```
+Although these patterns can be implemneted with abstract classes, interfaces make more sense here.
 
 ## MEMENTO DESIGN PATTERN
 It is a Behavioural design pattern . You can use this pattern when you need to store state of a
@@ -76,3 +101,20 @@ search service. The proxy service simply uses firewall to authorize the user req
 ## UML DIAGRAM
 
 ![proxy-design-pattern-uml-diagram](assets/proxy.png)
+
+
+## FLYWEIGHT DESIGN PATTERN
+It is a Structural design pattern used to minimize memory usage by sharing as much data as possible with similar objects — the "flyweight" objects hold intrinsic, shareable state while extrinsic state is supplied by the client.
+
+### IMPLEMENTATION (this repo)
+- **`BulletType`**: the flyweight object that contains intrinsic properties (name, bitmap, dimensions, particle count).
+- **`BulletFactory`**: a pool (map) of `BulletType` instances — `getBullet(name, color, dimension)` returns a shared `BulletType` for the requested name, creating it only if missing.
+- **`Game` / `Flyweight`**: sample client code that fires bullets; the client provides extrinsic state (start/target coordinates, speed) and reuses `BulletType` instances supplied by `BulletFactory` to reduce memory allocation.
+
+### UML DIAGRAM
+
+![flyweight-pattern-uml-diagram](assets/flyweight_uml.png)
+
+### How to run
+- Run the example `Flyweight` main in `com.project.designpatterns.flyweightPattern` to see the reuse of `BulletType` objects in action.
+
