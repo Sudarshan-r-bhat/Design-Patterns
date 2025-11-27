@@ -1,7 +1,5 @@
 package com.project.designpatterns.AbstractFactoryPattern;
 
-import org.apache.tomcat.jni.Time;
-
 /*
 ps:
 	implement 2 Email clients which have the functionality of Inbox-viewing and compose-send email. 

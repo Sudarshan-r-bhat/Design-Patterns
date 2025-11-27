@@ -1,41 +1,29 @@
 package com.project.designpatterns.chainOfResponsibility;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.stereotype.Component;
-
-@Component("emailChainCreator")
 public class EmailChianCreator {
-	
-	@Autowired
-	@Qualifier("emailProcessor")
-	EmailProcessor emailProcessor;
-	
-	@Autowired
-	@Qualifier("validateEmail")
-	EmailProcessorChain1 emailValidator;
-	
-	@Autowired
-	@Qualifier("validatePassword")
-	EmailProcessorChain2 passwordValidator;
-	
-	@Autowired
-	@Qualifier("finalChain")
-	EmailProcessorChain3 finalStep;
-	
-	
+
+	private EmailProcessorChain1 emailValidator;
+	private EmailProcessorChain2 passwordValidator;
+	private EmailProcessorChain3 finalStep;
+
+	public EmailChianCreator() {
+		this.emailValidator = new EmailProcessorChain1();
+		this.passwordValidator = new EmailProcessorChain2();
+		this.finalStep = new EmailProcessorChain3();
+	}
+
 	EmailProcessor getChains() throws Exception {
-		
+
 		EmailProcessor chain1 = emailValidator;
 		EmailProcessor chain2 = passwordValidator;
 		EmailProcessor chain3 = finalStep;
-		
+
 		// adding this verbosity for better readability
-		
+
 		chain1.setNextProcessor(chain2);
 		chain2.setNextProcessor(chain3);
 		chain3.setNextProcessor(null);
-		
+
 		return chain1;
 	}
 }

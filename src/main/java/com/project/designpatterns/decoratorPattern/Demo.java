@@ -1,7 +1,5 @@
 package com.project.designpatterns.decoratorPattern;
 
-import javassist.ClassPath;
-
 /*
 NOTE:
 	when a child class object is created its parent class is NOT instantiated.
