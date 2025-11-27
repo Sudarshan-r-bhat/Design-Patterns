@@ -76,3 +76,20 @@ search service. The proxy service simply uses firewall to authorize the user req
 ## UML DIAGRAM
 
 ![proxy-design-pattern-uml-diagram](assets/proxy.png)
+
+
+## FLYWEIGHT DESIGN PATTERN
+It is a Structural design pattern used to minimize memory usage by sharing as much data as possible with similar objects — the "flyweight" objects hold intrinsic, shareable state while extrinsic state is supplied by the client.
+
+### IMPLEMENTATION (this repo)
+- **`BulletType`**: the flyweight object that contains intrinsic properties (name, bitmap, dimensions, particle count).
+- **`BulletFactory`**: a pool (map) of `BulletType` instances — `getBullet(name, color, dimension)` returns a shared `BulletType` for the requested name, creating it only if missing.
+- **`Game` / `Flyweight`**: sample client code that fires bullets; the client provides extrinsic state (start/target coordinates, speed) and reuses `BulletType` instances supplied by `BulletFactory` to reduce memory allocation.
+
+### UML DIAGRAM
+
+![flyweight-pattern-uml-diagram](assets/flyweight_uml.png)
+
+### How to run
+- Run the example `Flyweight` main in `com.project.designpatterns.flyweightPattern` to see the reuse of `BulletType` objects in action.
+
