@@ -1,12 +1,8 @@
 package com.project.designpatterns.Adapter;
 
-public class ChargerIndian extends Charger {
-	
-	private ChargerAdapter adapter;
-	
-	public ChargerIndian() {
-		adapter = new ChargerAdapter();
-	}
+public class ChargerIn implements Charger {
+	public ChargerIn() {}
+
 	@Override
 	public void charge(Electricity electricity) {
 		if(electricity.getCountry().equalsIgnoreCase("in")) {
@@ -23,7 +19,7 @@ public class ChargerIndian extends Charger {
 			}
 			
 		} else {
-			adapter.charge(electricity);
+			System.out.println("Invalid charger for your country. Please use Charger Adapter");
 		}
 	}
 

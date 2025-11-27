@@ -49,9 +49,7 @@ It is a Structural design pattern used to connect the client class/interface wit
 compatible/incompatible interface.
 
 ### EXAMPLE
-Let's say you travel abroad with your regular charger, but the countries abroad use different sockets
-with different voltage and current. Now to charge your device you need an adapter with socket
-that supports your devices and plug that is compatible with different socket types.
+Let's say you travel abroad with your regular charger, but the countries abroad use different sockets & charger pins with different charging functionality type like fastcharging and also different voltage and current. Now to charge your device you need an adapter specific for the socket and electricity standards.
 
 ### UML DIAGRAM
 
