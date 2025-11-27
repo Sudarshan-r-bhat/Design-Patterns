@@ -1,8 +1,0 @@
-
-Problem statement:
-	
-	- You need to have multiple subscribers/users Eclipse software users
-	 for specific updates
-	- Eclipse server should be able generate different updates and subscribers 
-	 need to be notified accordingly.
-	
