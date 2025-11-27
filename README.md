@@ -16,7 +16,7 @@ edit.
 
 ### UML DIAGRAM
 
-![memento-design-pattern-uml-diagram](design-patterns/assets/memento.png)
+![memento-design-pattern-uml-diagram](assets/memento.png)
 
 
 ## ADAPTER DESIGN PATTERN
@@ -30,7 +30,7 @@ that supports your devices and plug that is compatible with different socket typ
 
 ### UML DIAGRAM
 
-![adapter-design-pattern-uml-diagram](design-patterns/assets/adapter.png)
+![adapter-design-pattern-uml-diagram](assets/adapter.png)
 
 
 
@@ -47,7 +47,7 @@ for modification to the governing body without altering the actual object.
 
 ### UML DIAGRAM
 
-![prototype-design-pattern-uml-diagram](design-patterns/assets/prototype.png)
+![prototype-design-pattern-uml-diagram](assets/prototype.png)
 
 ## DECORATOR DESIGN PATTERN
 It is a Structural design pattern used to provision multiple operations apart from the basic operation on a
@@ -60,7 +60,7 @@ process to enable reading.
 
 ### UML DIAGRAM
 
-![decorator-design-pattern-uml-diagram](design-patterns/assets/decorator.png)
+![decorator-design-pattern-uml-diagram](assets/decorator.png)
 
 # PROXY DESIGN PATTERN
 It is a structural design pattern used to provide a proxy for a service class, so that it can control the flow of information in and out of the actual service class. And aslo
@@ -75,4 +75,4 @@ search service. The proxy service simply uses firewall to authorize the user req
 
 ## UML DIAGRAM
 
-![proxy-design-pattern-uml-diagram](design-patterns/assets/proxy.png)
+![proxy-design-pattern-uml-diagram](assets/proxy.png)
