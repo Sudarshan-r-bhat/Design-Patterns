@@ -1,1 +1,89 @@
-/.metadata/
+# Ignore IDE specific files and folders
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# Ignore Maven build files
+target/
+*.log
+*.class
+*.jar
+*.war
+*.ear
+
+# Ignore temporary files
+*.tmp
+*.temp
+*.swp
+*.swo
+
+# Ignore OS generated files
+.DS_Store
+Thumbs.db
+
+# Ignore other unnecessary files
+*.bak
+*.old
+*.orig
+*.rej
+*.sublime-project
+*.sublime-workspace
+
+# Ignore logs
+*.log
+
+# Ignore node_modules (if applicable)
+node_modules/
+
+# Ignore Python virtual environments (if applicable)
+venv/
+__pycache__/
+*.py[cod]
+
+# Ignore Java specific files
+*.class
+*.jar
+*.war
+*.ear
+
+# Ignore build output
+target/
+
+# Ignore IntelliJ IDEA project files
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# Ignore Eclipse project files
+.project
+.classpath
+.settings/
+
+# Ignore NetBeans project files
+nbproject/
+
+# Ignore VS Code settings
+.vscode/
+
+# Ignore macOS system files
+.DS_Store
+
+# Ignore Windows system files
+Thumbs.db
+
+# Ignore temporary files
+*.tmp
+*.temp
+*.swp
+*.swo
+
+# Ignore backup files
+*.bak
+*.old
+*.orig
+*.rej
+
+# Ignore logs
+*.log
