@@ -1,16 +1,20 @@
 package com.project.designpatterns.statePattern;
 
 public class PublishState implements State {
-	private Document doc;
+	
 	@Override
-	public void process(Document doc) {
-		this.doc = doc;
-		this.doc.text = "document is published";
+	public void draft(Document doc) {
+		System.out.println("Cannot go back to draft from published state.");
+	}
+	
+	@Override
+	public void moderate(Document doc) {
+		System.out.println("Cannot go back to moderate from published state.");
+	}
+	
+	@Override
+	public void publish(Document doc) {
+		doc.setText("document is published");
 		System.out.println("Publishing the document...");
-		setState();
 	}
-	public void setState() {
-		doc.state = this;
-	}
-
 }
