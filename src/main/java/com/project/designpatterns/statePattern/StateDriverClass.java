@@ -5,43 +5,18 @@ public class StateDriverClass {
 	public static void main(String[] args) {
 		
 		Document doc = new Document();
-		doc.text = "raw data";
-		State currentStateOfDocument = null;
+		doc.setText("raw data");
 		
-		System.out.println(doc.text);
+		System.out.println(doc.getText());
 		
-		draft(doc);
-		System.out.println(doc.text);
+		doc.draft();
+		System.out.println(doc.getText());
 		
-		moderate(doc);
-		System.out.println(doc.text);
+		doc.moderate();
+		System.out.println(doc.getText());
 		
-		publish(doc);
-		System.out.println(doc.text);
-	}
-
-	public static void draft(Document doc) {
-		if (doc.state == null) {
-			new DraftState().process(doc);
-		} else {
-			System.out.println(doc.state.getClass().getSimpleName());
-		}
-	}
-
-	public static void moderate(Document doc) {
-		if (doc.state.getClass().getSimpleName().equalsIgnoreCase("DraftState")) {
-			new ModerateState().process(doc);
-		} else {
-			System.out.println(doc.state.getClass().getSimpleName());
-		}
-	}
-
-	public static void publish(Document doc) {
-		if (doc.state.getClass().getSimpleName().equalsIgnoreCase("ModerateState")) {
-			new PublishState().process(doc);
-		} else {
-			System.out.println(doc.state.getClass().getSimpleName());
-		}
+		doc.publish();
+		System.out.println(doc.getText());
 	}
 
 }
